@@ -1,0 +1,121 @@
+
+ body {
+    /* background: rgba(0, 0, 0, 0.678); */
+ }
+
+
+.App {
+    display: grid;
+    place-content: center;
+}
+
+.hide {
+    display: none;
+}
+.unhide {
+    display: block;
+}
+
+.todo-app {
+    gap: 2.5rem;
+    display: flex;
+    padding: 1rem;
+    min-width: 500px;
+    flex-direction: column;
+}
+.todo-input {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.todo-input input {
+    width: 90%;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 2.5rem;
+    border-radius: 5px;
+    align-self: center;
+    background: transparent;
+    border-bottom: 4px solid rgb(254, 246, 246);
+}
+.todo-input input:focus {
+    outline: 3px solid orange;
+}
+
+.todo-input button {
+    width: 60%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    align-self: center;
+    border-radius: 5px;
+    background: orangered;
+}
+
+
+.todo {
+    display: flex;
+    padding: 1.5rem;
+    flex-direction: column;
+    background: rgba(128, 128, 128, 0.389);
+}
+.buttons {
+    display: flex;
+    padding-top: 1rem;
+    border-top: 2px solid white;
+}
+.buttons button {
+    width: 50%;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.buttons button:hover {
+    color: black;
+    transition: 0.3s ease-in;
+    background: rgba(255, 255, 255, 0.353);
+}
+
+.todo input {
+    color: red;
+    border: none;
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 0.4rem;
+    background: transparent;
+
+
+}
+
+p {
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 0.4rem;
+    color: blanchedalmond;
+
+}
+
+.todos {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    border: 2px solid white;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+}
+
+.time {
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}

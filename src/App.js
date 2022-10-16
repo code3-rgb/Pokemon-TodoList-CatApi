@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css'
+import { Json } from './JSON/json';
+import { Todo } from './Todo/Todo';
+import { Search } from './SearchBar/search';
+import {  BrowserRouter, Route, Routes } from "react-router-dom";
+import { Invoice } from './Invoices/invoice';
+import { Links } from './Links/Links';
+import { Pokemon } from './Pokemon/PokemonState';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+return (
+
+
+      <BrowserRouter>
+        <div className='App'>
+        <Routes>
+          <Route path='/' element={<Links />} />
+          <Route path='/pokemon' element={<Pokemon />} />
+          <Route path="/todo" element={<Todo />} />
+          <Route path="/json" element={<Json />} />
+          <Route path="/Search" element={<Search />} />
+          <Route path="/invoice" element={<Invoice />} />
+        </Routes>
+
+
+
+
+
+        </div>
+      </BrowserRouter>
+
+
+);
+
 }
 
 export default App;

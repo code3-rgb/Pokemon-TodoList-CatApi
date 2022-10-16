@@ -1,0 +1,20 @@
+
+.search {
+    padding: 2rem;
+}
+.search-box {
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+}
+input {
+    font-size: 3.5rem;
+}
+
+h1,p {
+    color: green;
+}
+
+.search-input {
+    display: flex;
+    justify-content: center;
+}
