@@ -4,10 +4,7 @@
  }
 
 
-.App {
-    display: grid;
-    place-content: center;
-}
+
 
 .hide {
     display: none;
@@ -25,19 +22,19 @@
 }
 .todo-input {
     gap: 1rem;
+    color: orange;
     display: flex;
     flex-direction: column;
 
 }
 .todo-input input {
     width: 90%;
-    color: white;
+    color: rgb(219, 99, 99);
     border: none;
     outline: none;
     font-size: 2.5rem;
     border-radius: 5px;
     align-self: center;
-    background: transparent;
     border-bottom: 4px solid rgb(254, 246, 246);
 }
 .todo-input input:focus {
@@ -93,13 +90,13 @@
 
 }
 
-p {
+ /* p {
     font-size: 2rem;
     padding-left: 2rem;
     padding-bottom: 0.4rem;
-    color: blanchedalmond;
+    color: rgb(98, 63, 10);
 
-}
+} */
 
 .todos {
     gap: 1rem;
@@ -107,12 +104,12 @@ p {
     flex-direction: column;
 }
 
-h1 {
+/* h1 {
     border: 2px solid white;
     text-align: center;
     color: white;
     padding: 1rem;
-}
+} */
 
 .time {
     padding: 1rem;

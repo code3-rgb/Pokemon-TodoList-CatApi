@@ -8,6 +8,7 @@ export const Links = () => {
         <Link to="/Todo">Todo</Link> 
         <Link to="/pokemon">Pokemon</Link> 
         <Link to="/Json">Json</Link> 
+        <Link to="/upload">Upload</Link> 
         <Link to="/Search">Search</Link> 
         <Link to="/Invoice">Invoice</Link> 
     </div>

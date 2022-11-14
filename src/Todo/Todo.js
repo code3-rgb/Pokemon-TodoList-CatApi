@@ -3,7 +3,6 @@ import { TodoContext } from '../Context/TodoContext'
 import { useEffect, useReducer, useState } from 'react'
 import { nanoid } from '@reduxjs/toolkit'
 import { Display } from './Display'
-import moment from 'moment'
 
 const ACTION = {
     'ADDTODO': "ADDTODO",

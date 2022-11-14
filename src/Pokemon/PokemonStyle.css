@@ -9,213 +9,158 @@
     font-family: PokemonFontSolid;
     src: url('./font/Pokemon\ Solid.ttf');
 }
- 
-.Pokemon-Container {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-}
+
 
 
 .Pokemons {
     gap: 2rem;
+    width: 100%;
     display: grid;
-    background: yellow;
-    margin-bottom: 4rem;
-    transition: 0.6s ease-in;
-    font-family: PokemonFontHollow;
-}
-
-.h1 {
-    border: none;
-    font-size: 3rem;
-    color: orangered;
-    letter-spacing: 6px;
-    font-family: PokemonFontHollow;
-}
-.h2 {
-    border: none;
-    color: white;
-    font-size: 2.5rem;
-    letter-spacing: 6px;
-    font-family: PokemonFontHollow;
-}
-
-
-
-
-img {
-    background: white;
-    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-
-
-}
-
-
-.pokemon {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-}
-
-.description {
-    display: grid;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    background: white;
-    transition: 0.3s ease-in;
-    grid-template-columns: repeat(4,100%);
-
-}
-
-.description div {
-    height: 10vh;
-    display: flex;
-    padding: 1.2rem;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     align-items: center;
-    background: whitesmoke;
-    flex-direction: column;
-    justify-content: center;
-    transition: 0.3s ease-in;
+    background: rgba(0, 92, 128, 0.749);
+    background-size: 100%;
+    background-position: center;
+    grid-template-columns: repeat(1,300px);
 
 }
 
 
-p {
-    margin: 0;
-    width: 100%;
-    color: red;
-    font-size: 2rem;
-}
-
-.duo {
-    display: flex;
-    font-size: 0.5rem;
-}
-.duo p {
-    font-size: 1.5rem;
-}
-
-.bmp {
-    font-size: 0.5rem;
-
-}
-
-.desc-buttons {
-    gap: 1rem;
-    padding: 2rem;
-    display: flex;
-    position: relative;
-    background: white;
-    justify-content: center;
-}
-
-.desc-buttons button {
-    border: none;
-    color: red;
-    cursor: pointer;
-    font-size: 1.2rem;
-    background: transparent;
-    font-family: PokemonFontSolid;
-
-}
-
-.desc-buttons::after {
-    top: 0px;
-    right: 18%;
-    height: 5px;
-    content: '';
-    width: 200px;
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    background-color: black;
-
-}
-
-
-.navigation {
-    width: 100%;
-    display: flex;
-    padding-top: 2rem;
-    background: white;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid black;
-
-}
-.navigation button {
-    border: none;
+.poke-header {
     color: white;
+    text-decoration:5px solid white underline;
+    font-family: PokemonFontHollow;
+    letter-spacing: 0.5rem;
+    background: rgba(0, 92, 128, 0.574);
     font-size: 3rem;
-    padding: 2rem;
-    background-color: orange;
-    font-family: PokemonFontSolid;
-
-}
-.navigation button:nth-child(2) {
-    margin-left:auto ;
-}
-
-.footer {
-    width: 100%;
-    background: purple;
-    border: 2px solid red;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     text-align: center;
 
 }
-.header {
-    background: whitesmoke;
+
+.poke-left,.poke-right {
+    position: fixed;
+    top: 50%;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    font-family: PokemonFontHollow;
+}
+.poke-left {
+    left: 5%;
+
+}
+.poke-right {
+    left: 70%;
 }
 
-@media (min-width: 360px) {
-        .Pokemons {
-            gap: 2rem;
-            width: 360px;
-            display: grid;
-            align-self: center;
-            place-content: center;
-            background-color: white;
-        }
 
+.individual-pokemon {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.individual-pokemon img {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.804);
+
+}
+.individual-pokemon .description {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    background: #792F4F;
 
 
 }
 
-@media (min-width: 768px) {
+.individual-pokemon .description div  {
+    display: flex;
+    font-size: 1.5rem;
+    flex-direction: column;
+}
+
+
+.individual-pokemon .description span {
+    font-family: PokemonFontHollow;
+
+}
+
+.individual-pokemon .description p {
+    color: red;
+    margin-top: 1rem;
+    font-family: PokemonFontSolid;
+}
+
+.individual-pokemon .description ul {
+    margin-top: 1rem;
+}
+
+.individual-pokemon .description ul li {
+    margin-top: 1rem;
+}
+
+
+.individual-pokemon .description span {
+    color: white;
+}
+.individual-pokemon .description ul{
+    list-style: none;
+    padding: none;
+    margin: none;
+    color: red;
+}
+
+
+.poke-link {
+    position: fixed;
+    left: 40px;
+    bottom: 25px;
+    width: 90px;
+    height: 90px;
+    background: url(../../images/pokedex.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    background-color: rgba(128, 18, 18, 0.262);
+
+
+}
+
+
+@media (min-width: 700px) {
     .Pokemons {
-        gap: 3rem;
-        width: 100%;
-        display: grid;
-        place-content: center;
-        background-color: white;
-        grid-template-columns: repeat(2,300px);
+        grid-template-columns: repeat(2,350px);
     }
-
-
+    .poke-left .poke-right {
+        font-size: 2rem;
+    }
+    .poke-right {
+        left: 80%;
+    }
+    
 }
-
-
 @media (min-width: 1200px) {
     .Pokemons {
-        gap: 4rem;
-        width: 100%;
-        display: grid;
-        place-content: center;
-        grid-template-columns: repeat(3,300px);
+        grid-template-columns: repeat(3,350px);
     }
-}
-
-@media (min-width: 2000px) {
-    .Pokemons {
-        gap: 4rem;
-        width: 1500px;
-        display: grid;
+    .poke-right {
+        left: 90%;
+    }
+    .poke-left,.poke-right {
+        font-size: 2rem;
         padding: 2rem;
-        place-content: center;
-        grid-template-columns: repeat(4,300px);
+    }
+    
+}
+@media (min-width: 1500px) {
+    .Pokemons {
+        grid-template-columns: repeat(4,350px);
     }
 }

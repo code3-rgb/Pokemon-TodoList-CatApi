@@ -5,7 +5,10 @@ import { PokemonContext } from '../Context/PokemonContext'
 import { reducer } from '../Reducers/PokemonReducer'
 import { ERROR, FETCH } from './PokemonActions'
 import { PokemonDisplay } from './PokemonDisplay'
-import './PokemonStyle.css'
+// import './PokemonStyle.css'
+import { Link } from 'react-router-dom'
+
+
 
 
 const initialState = {
@@ -115,30 +118,25 @@ export const Pokemon = () => {
       return <h1>An Error has Occured!</h1>
     }
 
+
+
   return (
     <PokemonContext.Provider value={{state,dispatch}}>
 
-      { state.Loading ? <BoxLoading /> :
-          <div className='Pokemon-Container'>
-          <div className='header'>
-              <h1 className='h1'>Pokemon</h1>
-              <div className='navigation'>
-                <button onClick={()=> FetchPokemons('prev')}>Prev</button>
-                <button onClick={()=> FetchPokemons('next')}>Next</button>
-            </div>
-            </div>
-            
-            
-            <PokemonDisplay />
-    
-            <div className='footer'>
-              <h2 className='h2'>
-                Pokemon; Gotta Catch em all.
-              </h2>
-            </div>
-          </div>
-      }
-    
+        <div className='pokemon-container'>
+        <h1 className='poke-header'>Pokemon</h1>
+
+
+        <Link className='poke-link' to='/searchPokemon'></Link>
+
+                          <button className='poke-left' onClick={()=> FetchPokemons('prev')}>Prev</button>
+                          <button className='poke-right' onClick={()=> FetchPokemons('next')}>Next</button>
+
+
+          { state.Loading ? <BoxLoading /> :
+                <PokemonDisplay />
+          }
+        </div>
 
     </PokemonContext.Provider>
   )

@@ -2,13 +2,12 @@ import { useContext } from 'react'
 import { BoxLoading } from 'react-loadingg'
 import React, { useEffect, useState } from 'react'
 import { PokemonContext } from '../Context/PokemonContext'
-
+import './PokemonStyle.css'
 
 
 export const PokemonDisplay = () => {
 
     const { state,dispatch } = useContext(PokemonContext)
-    const [scroll,setScroll] = useState(400)
 
 
 
@@ -29,55 +28,38 @@ export const PokemonDisplay = () => {
         }
 
         
-        const Scroll = (dir,id)=>{
-            const description = document.getElementById(id)
-            description.scrollTo(dir,0)
-        }
 
         return state.Pokemons.map(value=>(
 
-            <>
+
+                <div className='individual-pokemon' key={value.id}>
+                   
+                    <img src={value.image} />
+                    <div className='description' id={value.id}>
+                        <div>
+                            <p><span>Species: </span><br/>{value.name}</p>
+                            <p><span>Base Exp: </span><br/>{ value.base_experience }</p>
             
-            {
-            state.Loading ? <BoxLoading /> :
-            <div className='pokemon' key={value.id}>
-                <img src={value.image} />
-                <div className='desc-buttons'>
-                    <button onClick={(e)=> Scroll(0,value.id)}>Name</button>
-                    <button onClick={(e)=> Scroll(300,value.id)}>Exp</button>
-                    <button onClick={(e)=> Scroll(600,value.id)}>BMP</button>
-                    <button onClick={(e)=> Scroll(900,value.id)}>Abilities</button>
-                </div>
-                <div className='description' id={value.id}>
-                    
-                    <div>
-                    <p>{value.name}</p>
-                    </div>
-                    <div>
-                        <p>Base Exp: { value.base_experience }</p>
+                            <p><span>Weight: </span><br/> { value.weight}</p>
+                            <p><span>Height: </span><br/> { value.height}</p>
+                        </div>
+                        <div className='pokemon-abilities'>
+                        <ul>
+                            <span>Abilities:</span>
+                        {    value.ability.map(val=><li>{ val }</li>)   }
+                        </ul>
+                        </div>
+
                     </div>
 
-                    <div className='duo'>
-                        <p>Weight: { value.weight}</p>
-                        <p>Height: { value.height}</p>
-                    </div>
-
-                    <div className='duo'>
-                        {    value.ability.map(val=><p>{ val }</p>)   }
-                    </div>
                 </div>
-            </div>
-    }
-            
-            
-            </>
 
         ))
     }
 
 
   return (
-    <div className='Pokemons'>
+    <div className='Pokemons' >
         { Display() }
     </div>
   )
